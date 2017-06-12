@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="663.0" style="-fx-background-color: #3498db; -fx-border-color: #000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Client.Quiz.view.QuizFXMLController">
+   <bottom>
+      <HBox fx:id="BottomBox" alignment="CENTER" prefHeight="51.0" prefWidth="663.0" spacing="10.0" style="-fx-background-color: #3498db;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#submitButtonAction" prefHeight="41.0" prefWidth="96.0" style="-fx-background-color: #2ecc71;" text="Submit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane fx:id="MainCenterPane" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #3498db;" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3498db; -fx-padding: 0;" stylesheets="@../../../../resource/styleSheet.css">
+               <content>
+                  <VBox fx:id="QuizBox" prefHeight="284.0" prefWidth="606.0" style="-fx-background-color: #3498db;" />
+               </content>
+               <StackPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </StackPane.margin>
+            </ScrollPane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <VBox style="-fx-background-color: #3BE281;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="BorderBox" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="663.0" style="-fx-background-color: #3498db;">
+               <children>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#CloseAction">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0">
+                           <image>
+                              <Image url="@../../../../resource/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="-5.0" top="-9.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="663.0" style="-fx-background-color: #3498db;">
+               <children>
+                  <HBox prefHeight="29.0" prefWidth="140.0" style="-fx-background-color: #4DA6E1; -fx-background-radius: 5;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="59.0" text="Time :" textAlignment="CENTER" textFill="#48e185">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="timeTxt" alignment="CENTER" prefHeight="27.0" prefWidth="60.0" text="0:0" textAlignment="CENTER" textFill="#48e185">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
